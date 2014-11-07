@@ -1,0 +1,9 @@
+{
+  "name": "docs.piep.io",
+  "private": "true",
+  "version": "0.1.0",
+  "dependencies": {
+    "express": "^4.10.1",
+    "js-yaml": "^3.2.2"
+  }
+}

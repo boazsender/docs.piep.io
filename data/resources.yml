@@ -1,0 +1,39 @@
+- 
+  url: /resources
+  http_verb: GET
+  desc: Get all resources
+  params:
+    - author
+    - author_org
+    - keywords
+  example:
+    - request:
+    - response:
+- 
+  url: /resources/:id
+  http_verb: GET
+  desc: Get a single resource based on id
+  example:
+    - request:
+    - response:
+- 
+  url: /resources
+  http_verb: POST
+  desc: Create a new resource
+  example:
+    - request:
+    - response:
+- 
+  url: /resources/id
+  http_verb: PUT
+  desc: Update a single resource based on id
+  example:
+    - request:
+    - response:
+- 
+  url: /resources/id
+  http_verb: DELETE
+  desc: Delete a single resource based on id
+  example:
+    - request:
+    - response:

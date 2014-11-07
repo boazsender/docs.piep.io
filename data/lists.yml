@@ -1,0 +1,39 @@
+- 
+  url: /lists
+  http_verb: GET
+  desc: Get all lists
+  params:
+    - author
+    - author_org
+    - keywords
+  example:
+    - request:
+    - response:
+- 
+  url: /lists/:id
+  http_verb: GET
+  desc: Get a single list based on id
+  example:
+    - request:
+    - response:
+- 
+  url: /lists
+  http_verb: POST
+  desc: Create a new list
+  example:
+    - request:
+    - response:
+- 
+  url: /lists/id
+  http_verb: PUT
+  desc: Update a single list based on id
+  example:
+    - request:
+    - response:
+- 
+  url: /lists/id
+  http_verb: DELETE
+  desc: Delete a single list based on id
+  example:
+    - request:
+    - response:

@@ -1,0 +1,39 @@
+- 
+  url: /objectives
+  http_verb: GET
+  desc: Get all objectives
+  params:
+    - author
+    - author_org
+    - keywords
+  example:
+    - request:
+    - response:
+- 
+  url: /objectives/:id
+  http_verb: GET
+  desc: Get a single objective based on id
+  example:
+    - request:
+    - response:
+- 
+  url: /objectives
+  http_verb: POST
+  desc: Create a new objective
+  example:
+    - request:
+    - response:
+- 
+  url: /objectives/id
+  http_verb: PUT
+  desc: Update a single objective based on id
+  example:
+    - request:
+    - response:
+- 
+  url: /objectives/id
+  http_verb: DELETE
+  desc: Delete a single objective based on id
+  example:
+    - request:
+    - response:
