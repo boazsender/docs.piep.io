@@ -1,0 +1,88 @@
+extend layout
+block append content
+  section#overview
+  h1 Overview
+  p This describes the resources that make up the official Piep API v0.
+  ol
+    li 
+      a(href="#current") Current Version
+    li 
+      a(href="#current") Schema
+    li 
+      a(href="#current") Parameters
+    li 
+      a(href="#current") Root Endpoint
+    li 
+      a(href="#current") Client Errors
+    li 
+      a(href="#current") HTTP Verbs
+    li 
+      a(href="#current") Authentication
+  section#current
+    h2 Current Version
+    p 
+      By default, all requests receive the v0 version of the API. We encourage you to explicitly request this version via the Accept header.
+    code Accept: application/vnd.piep.v0+json
+  section#schema
+    h2 Schema
+    p
+      All API access is over HTTPS, and accessed from the api.github.com domain (or through yourdomain.com/api/v3/ for enterprise). All data is sent and received as JSON.
+    h3 Collection Requests
+    p
+      When you fetch a list of resources, the response includes a subset of the attributes for that resource. This is the “summary” representation of the resource. (Some attributes are computationally expensive for the API to provide. For performance reasons, the summary representation excludes those attributes. To obtain those attributes, fetch the “detailed” representation.)
+    p
+      Example: When you get a list of repositories, you get the summary representation of each repository. Here, we fetch the list of repositories owned by the octokit organization:
+    code GET /resources/
+    h3 Element requests
+    p
+      When you fetch an individual resource, the response typically includes all attributes for that resource. This is the “detailed” representation of the resource. (Note that authorization sometimes influences the amount of detail included in the representation.)
+    p
+      Example: When you get an individual repository, you get the detailed representation of the repository. Here, we fetch the octokit/octokit.rb repository:
+    code GET /resources/1
+  section#parameters
+    h2  Parameters
+  section#root
+    h2 Root Endpoint
+    p
+      You can issue a GET request to the root endpoint to get all the endpoint categories that the API supports:
+    code curl https://api.piep.io</code>
+  section#errors
+    h2 Client Errors
+    p There are x possible types of client errors on API calls that receive request bodies:
+    ol
+      li
+        p Explanation
+        code EXAMPLE
+  section#http
+    h2 HTTP Verbs
+    p
+      Where possible, API v0 strives to use appropriate HTTP verbs for each action.
+    table
+      thead
+        tr
+          th Verb
+          th Description
+      tbody
+        tr
+          td
+            code HEAD
+          td Can be issued against any resource to get just the HTTP header info.
+        tr
+          td
+            code GET
+          td Used for retrieving resources.</td>
+        tr
+          td
+            code POST
+          td Used for creating resources, or performing custom actions (such as merging a pull request).
+        tr
+          td
+            code PUT
+          td.
+            Used for replacing resources or collections. For <code>PUT</code> requests with no <code>body</code> attribute, be sure to set the <code>Content-Length</code> header to zero.
+        tr
+          td 
+            code DELETE
+          td Used for deleting resources.
+  section#auth
+    h2 Authentication

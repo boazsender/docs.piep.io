@@ -1,0 +1,18 @@
+extend layout
+block append content
+  h1= resource_name
+  ul
+    if endpoints
+      for endpoint in endpoints
+        li
+          div.endpoint_title 
+            h3
+              code= endpoint.http_verb + " " +  endpoint.url
+          div.desc
+            p= endpoint.desc
+            div.example
+              h4 Example
+              div.request
+                code= endpoint.example.request
+              div.response
+                code= endpoint.example.request

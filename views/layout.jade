@@ -1,0 +1,44 @@
+doctype
+html
+  head
+    link(rel='stylesheet', href='/styles/styles.css')
+  body
+    header
+      .container
+        nav.clearfix
+        ul
+          li
+            a(href="/overview") Overview
+          li
+            a(href="/endpoints") Endpoints
+            ul
+              li
+                a(href="/endpoints/resources") Resources
+              li
+                a(href="/endpoints/objectives") Objectives
+              li
+                a(href="/endpoints/lists") Curated Lists
+    .container        
+      block content
+    footer
+      .container
+        .row
+          .col-5
+            h2 About piep!
+            p
+            Piep.io  is a package manager for educational materials   related to teaching programming and computer science.   Creating good content for a class is the biggest  bottleneck in developing good educational programs in  these fields, partially because the field moves so quickly.   Piep.io aims to harness the power of the community to  alleviate this bottleneck and produce relevant up-to-date  open source content for teachers.
+          .col-3
+            h2 Documentation
+            ul.docs
+              li
+                a(href="#") Getting Started
+              li
+                a(href="#") Publishing your own Package
+              li
+                a(href="#") Deploy your own piep.io
+              li
+                a(href="#") Contributing
+            h2 Stay in Touch</h2>
+            form
+              input(type="text", value="Your email")
+              button Submit
