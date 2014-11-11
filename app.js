@@ -17,12 +17,25 @@ app.use('/endpoints/:endpoint', function(req, res){
   res.render('endpoint', { resource_name: endpoint, endpoints: endpoint_data });
 });
 
+app.use('/overview', function(req,res){
+  res.render('overview');
+});
+
+app.use('/purpose', function(req,res){
+  res.render('purpose');
+});
+
 app.use('/endpoints', function(req,res){
   res.render('endpoints');
 });
 
-app.use('/overview', function(req,res){
-  res.render('overview');
+
+app.use('/contrib/issues', function(req, res){
+  res.render('issues');
+});
+
+app.use('/contrib/code', function(req, res){
+  res.render('code');
 });
 
 app.use('/contrib', function(req, res){

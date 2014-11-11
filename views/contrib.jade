@@ -1,6 +1,34 @@
 extend layout
 block append content
   h1 Contributing to Piep
-  .container
-    include ./tools.jade
-    include ./setup.jade
+  p 
+    Piep is, and always will be, and open source project. We are commited to be, not only open to, but actively seeking, the ideas of the education community regardless of any individual member's technical expertise.
+  .row
+    .panel.col-md-12
+      .panel-heading
+        h2
+          a(href="/contrib/code") Write Some Code!
+      .panel-body
+        p 
+          Implement a feature or fix a bug! These instructions will tell you how to get Piep up and running locally.
+        a(href="/contrib/code") 
+          button Read more >
+  .row
+    .panel.col-md-6
+      .panel-heading
+        h2
+          a(href="/contrib/issues#bugs") File A Bug
+      .panel-body
+        p 
+          Run into a technical issue with Piep? Follow these instructions to file a bug.
+        a(href="/endpoints/objectives") 
+          button Read more >
+    .panel.col-md-6
+      .panel-heading
+        h2
+          a(href="/contrib/issues#features") Suggest a New Feature
+      .panel-body
+        p
+          We're always looking for new feature ideas from the community.
+        a(href="/endpoints/resources") 
+          button Read more >

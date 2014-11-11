@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
     jade: {
       develop: {
-        src: '*',
+        src: '*.jade',
         dest: 'public/',
         ext: '.html',
         expand: true,
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         options: { data: { develop: true } }
       },
       production: {
-        src: '*',
+        src: '*.jade',
         dest: 'public/',
         expand: true,
         cwd: 'views/',
