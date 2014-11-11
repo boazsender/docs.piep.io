@@ -1,0 +1,30 @@
+extend layout
+block append content
+  h1 Piep API Endpoints
+  .row
+    .panel.col-md-6
+      h2
+        a(href="/endpoints/objectives") Objectives
+      p 
+        Objectives are student goal statements.
+      a(href="/endpoints/objectives") 
+        button Explore this endpoint >
+    .panel.col-md-6
+      h2
+        a(href="/endpoints/resources") Resources
+      p
+        Resources are exercises, videos, blog posts, tutorials, and other material that would help a student reach an objectives.
+      a(href="/endpoints/resources") 
+        button Explore this endpoint >
+  .row
+    .panel.col-md-6
+      h2
+        a(href="/endpoints/lists") Curated Lists
+      p 
+        Curated lists are lists of resources and objectives that center around a specifc category or topic that a student would want to learn. Members of the community build these lists to make it easier for students to find the best related content.
+      button(href="/endpoints/lists") Explore this endpoint >
+    .panel.col-md-6
+      h2 Want something more?
+      h2 
+        a(href="contrib")
+          button Contribute!

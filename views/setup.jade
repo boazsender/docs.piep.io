@@ -1,3 +1,36 @@
-extend layout
-block append content
+section#setup
   h1 Local Setup
+  section#overview
+    h2 Overview
+    ul
+      li
+        a(href="#install") Installation
+      li
+        a(href="#upandrunning") Up and Running
+  section#install
+    h2 Installation
+    p 
+      In order to get Piep running locally on your machine, it is required that you have the following things installed on your machine:
+    ul
+      li Git
+      li Node
+      li Grunt
+section#upandrunning
+  h2 Up and Running
+  p
+    Once you have installed git, node, and grunt
+  ul
+    li 
+      p Clone the project from github
+      code
+        git clone git@github.com:piep/piep.git
+    li
+      p Install dependencies
+      code
+        npm install
+      p 
+        If you run into errors, you may need to change permissions.
+    li
+      p Start the project on a local server
+      code
+        grunt

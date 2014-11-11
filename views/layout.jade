@@ -13,7 +13,8 @@ html
             ul.nav
               li 
                 a(href="/overview") API Overview
-              li Endpoints
+              li 
+                a(href="/endpoints") +Endpoints
                 ul.nav
                   li
                     a(href="/endpoints/resources") Resources
@@ -21,14 +22,15 @@ html
                     a(href="/endpoints/objectives") Objectives
                   li
                     a(href="/endpoints/lists") Curated Lists
-              li Deploy your own Piep
+              li 
+                a(href="/contrib") +Contributing
                 ul.nav
                   li
-                    a(href="/deploy/setup") Local Setup
+                    a(href="/contrib#setup") Local Setup
                   li
-                    a(href="/deploy/tools") Tools
-                  li
-                    a(href="/deploy/deploy") Deployment
+                    a(href="/contrib#tools") Tools
+              li
+                a(href="/deploy") Deploy Your Own Piep
         .col-md-9
           block content
     footer.clearfix
